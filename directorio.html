@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="system/icono.ico">
+    <title>Directorio - Urb. Bonavila Etapa Fuego</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="page-header">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html" style="text-decoration:none;color:inherit;display:flex;align-items:center;gap:10px;">
+                    <span class="logo-icon">🏘️</span>
+                    <span class="logo-text">Urb. Bonavila Etapa Fuego</span>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="directorio.html" class="active">Directorio</a></li>
+                <li><a href="eventos.html">Eventos</a></li>
+                <li><a href="index.html#contacto">Contacto</a></li>
+            </ul>
+            <button class="menu-toggle" aria-label="Menú">☰</button>
+        </nav>
+        <div class="page-header-content">
+            <span class="page-breadcrumb"><a href="index.html">Inicio</a> / Directorio</span>
+            <h1>Junta Directiva</h1>
+            <p>Conoce a los representantes que trabajan por el bienestar de nuestra urbanización</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <div class="tabs">
+                    <div class="tab-buttons" role="tablist">
+                        <button class="tab-btn active" data-tab="presidente" role="tab">Presidente</button>
+                        <button class="tab-btn" data-tab="vicepresidente" role="tab">Vicepresidente</button>
+                        <button class="tab-btn" data-tab="secretario" role="tab">Secretario</button>
+                        <button class="tab-btn" data-tab="tesorero" role="tab">Tesorero</button>
+                        <button class="tab-btn" data-tab="vocal1" role="tab">Vocal 1</button>
+                        <button class="tab-btn" data-tab="vocal2" role="tab">Vocal 2</button>
+                        <button class="tab-btn" data-tab="vocal3" role="tab">Vocal 3</button>
+                        <button class="tab-btn" data-tab="vocal4" role="tab">Vocal 4</button>
+                    </div>
+
+                    <!-- PRESIDENTE -->
+                    <div class="tab-content active" id="presidente" role="tabpanel">
+                        <div class="profile-card">
+                            <div class="avatar">👨‍💼</div>
+                            <div class="profile-info">
+                                <span class="role-badge">Presidente</span>
+                                <h3>Nombre del Presidente</h3>
+                                <p class="description">Lidera la junta directiva y representa oficialmente a la urbanización ante autoridades y proveedores.</p>
+                                <ul class="responsibilities">
+                                    <li>Convocar y presidir las asambleas</li>
+                                    <li>Representación legal de la comunidad</li>
+                                    <li>Coordinación general de proyectos</li>
+                                </ul>
+                                <div class="contact-row">
+                                    <span>📧 presidente@bonavilafuego.com</span>
+                                    <span>📱 +000 000 0000</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- VICEPRESIDENTE -->
+                    <div class="tab-content" id="vicepresidente" role="tabpanel">
+                        <div class="profile-card">
+                            <div class="avatar">👩‍💼</div>
+                            <div class="profile-info">
+                                <span class="role-badge">Vicepresidente</span>
+                                <h3>Nombre del Vicepresidente</h3>
+                                <p class="description">Apoya y reemplaza al presidente en sus funciones cuando es necesario.</p>
+                                <ul class="responsibilities">
+                                    <li>Suplir al presidente en ausencias</li>
+                                    <li>Coordinar comisiones de trabajo</li>
+                                    <li>Seguimiento de acuerdos</li>
+                                </ul>
+                                <div class="contact-row">
+                                    <span>📧 vicepresidente@bonavilafuego.com</span>
+                                    <span>📱 +000 000 0000</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SECRETARIO -->
+                    <div class="tab-content" id="secretario" role="tabpanel">
+                        <div class="profile-card">
+                            <div class="avatar avatar--photo">
+                                <img src="directorio/secretario.jpg" alt="Foto de Michael Rodríguez - Secretario">
+                            </div>
+                            <div class="profile-info">
+                                <span class="role-badge">Secretario</span>
+                                <h3>Michael Rodríguez</h3>
+                                <p class="description">Encargado de la documentación oficial y comunicaciones de la urbanización.</p>
+                                <ul class="responsibilities">
+                                    <li>Levantar actas de reuniones</li>
+                                    <li>Manejo de correspondencia</li>
+                                    <li>Archivo de documentos</li>
+                                </ul>
+                                <div class="contact-row">
+                                    <span>📧 michael7x@hotmail.com</span>
+                                    <span>📱 0982758166</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TESORERO -->
+                    <div class="tab-content" id="tesorero" role="tabpanel">
+                        <div class="profile-card">
+                            <div class="avatar">💰</div>
+                            <div class="profile-info">
+                                <span class="role-badge">Tesorero</span>
+                                <h3>Nombre del Tesorero</h3>
+                                <p class="description">Administra los recursos económicos de la urbanización con transparencia.</p>
+                                <ul class="responsibilities">
+                                    <li>Manejo de cuentas y presupuesto</li>
+                                    <li>Cobro de cuotas mensuales</li>
+                                    <li>Reportes financieros</li>
+                                </ul>
+                                <div class="contact-row">
+                                    <span>📧 tesorero@bonavilafuego.com</span>
+                                    <span>📱 +000 000 0000</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- VOCAL 1 -->
+                    <div class="tab-content" id="vocal1" role="tabpanel">
+                        <div class="profile-card">
+                            <div class="avatar">🛡️</div>
+                            <div class="profile-info">
+                                <span class="role-badge">Vocal 1</span>
+                                <h3>Nombre del Vocal 1</h3>
+                                <p class="vocal-support">Miembro de apoyo a la junta directiva</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- VOCAL 2 -->
+                    <div class="tab-content" id="vocal2" role="tabpanel">
+                        <div class="profile-card">
+                            <div class="avatar">🌳</div>
+                            <div class="profile-info">
+                                <span class="role-badge">Vocal 2</span>
+                                <h3>Nombre del Vocal 2</h3>
+                                <p class="vocal-support">Miembro de apoyo a la junta directiva</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- VOCAL 3 -->
+                    <div class="tab-content" id="vocal3" role="tabpanel">
+                        <div class="profile-card">
+                            <div class="avatar">🎉</div>
+                            <div class="profile-info">
+                                <span class="role-badge">Vocal 3</span>
+                                <h3>Nombre del Vocal 3</h3>
+                                <p class="vocal-support">Miembro de apoyo a la junta directiva</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- VOCAL 4 -->
+                    <div class="tab-content" id="vocal4" role="tabpanel">
+                        <div class="profile-card">
+                            <div class="avatar">🤝</div>
+                            <div class="profile-info">
+                                <span class="role-badge">Vocal 4</span>
+                                <h3>Nombre del Vocal 4</h3>
+                                <p class="vocal-support">Miembro de apoyo a la junta directiva</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contacto">
+        <div class="container footer-grid">
+            <div>
+                <h3>🏘️ Urb. Bonavila Etapa Fuego</h3>
+                <p>Una comunidad unida construyendo un mejor lugar para vivir.</p>
+            </div>
+            <div>
+                <h4>Contacto</h4>
+                <p>📧 michael7x@hotmail.com</p>
+                <p>📱 0982758166</p>
+                <p>📍 Etapa Fuego</p>
+            </div>
+            <div>
+                <h4>Horario de Atención</h4>
+                <p>Lunes a Viernes: 9:00 - 18:00</p>
+                <p>Sábados: 9:00 - 13:00</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Urb. Bonavila Etapa Fuego. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

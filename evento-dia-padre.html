@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="system/icono.ico">
+    <title>Día del Padre 2026 - Urb. Bonavila Etapa Fuego</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="page-header page-header--padre">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html" style="text-decoration:none;color:inherit;display:flex;align-items:center;gap:10px;">
+                    <span class="logo-icon">🏘️</span>
+                    <span class="logo-text">Urb. Bonavila Etapa Fuego</span>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="directorio.html">Directorio</a></li>
+                <li><a href="eventos.html" class="active">Eventos</a></li>
+                <li><a href="index.html#contacto">Contacto</a></li>
+            </ul>
+            <button class="menu-toggle" aria-label="Menú">☰</button>
+        </nav>
+        <div class="page-header-content">
+            <span class="page-breadcrumb">
+                <a href="index.html">Inicio</a> / <a href="eventos.html">Eventos</a> / Día del Padre 2026
+            </span>
+            <h1>👨‍👦 Día del Padre 2026</h1>
+            <p>Una celebración especial para los papás que hacen grande a nuestra comunidad</p>
+            <div class="event-date-badge">Sábado, 20 de Junio de 2026 — 17:00</div>
+        </div>
+    </header>
+
+    <main>
+        <section class="section section-alt">
+            <div class="container">
+                <div class="tabs ev-tabs">
+                    <div class="tab-buttons" role="tablist">
+                        <button class="tab-btn active" data-tab="padre-hogares" role="tab">🏠 Hogares Participantes</button>
+                        <button class="tab-btn" data-tab="padre-programa" role="tab">📅 Programa del Día</button>
+                        <button class="tab-btn" data-tab="padre-info" role="tab">📋 Información</button>
+                    </div>
+
+                    <!-- TAB 1: HOGARES PARTICIPANTES -->
+                    <div class="tab-content active" id="padre-hogares" role="tabpanel">
+                        <div class="table-toolbar">
+                            <h3>🏠 Listado de Hogares Participantes</h3>
+                            <input type="text" id="tableSearch" class="table-search" placeholder="Buscar familia, manzana..." oninput="filterTable()">
+                        </div>
+                        <div class="table-wrapper">
+                            <table class="participants-table" id="participantsTable">
+                                <thead>
+                                    <tr>
+                                        <th>Mz.</th>
+                                        <th>Villa</th>
+                                        <th>Familia</th>
+                                        <th>Cuota</th>
+                                        <th>N.º Participantes</th>
+                                        <th>Detalle</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Agregar filas aquí -->
+                                    <tr>
+                                        <td colspan="6" style="text-align:center;padding:30px;color:var(--gray);">
+                                            Inscripciones abiertas — aún no hay hogares registrados.
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p class="table-footer-note">Total de registros: <strong id="rowCount">0</strong> hogar(es) participante(s).</p>
+                    </div>
+
+                    <!-- TAB 2: PROGRAMA DEL DÍA -->
+                    <div class="tab-content" id="padre-programa" role="tabpanel">
+                        <div class="events-timeline">
+                            <div class="event-card">
+                                <div class="event-time" style="background: linear-gradient(135deg,#1d3557,#457b9d);">10:00 AM</div>
+                                <div class="event-body">
+                                    <span class="event-icon">☕</span>
+                                    <h3>Recepción y Desayuno de Honor</h3>
+                                    <p>Los papás son recibidos con un desayuno especial preparado por la comunidad.</p>
+                                    <span class="event-location">📍 Salón Comunal</span>
+                                </div>
+                            </div>
+                            <div class="event-card">
+                                <div class="event-time" style="background: linear-gradient(135deg,#1d3557,#457b9d);">11:00 AM</div>
+                                <div class="event-body">
+                                    <span class="event-icon">🎤</span>
+                                    <h3>Palabras de la Junta Directiva</h3>
+                                    <p>Reconocimiento oficial a los papás de la urbanización por su aporte a la comunidad.</p>
+                                    <span class="event-location">📍 Salón Comunal</span>
+                                </div>
+                            </div>
+                            <div class="event-card">
+                                <div class="event-time" style="background: linear-gradient(135deg,#1d3557,#457b9d);">11:30 AM</div>
+                                <div class="event-body">
+                                    <span class="event-icon">⚽</span>
+                                    <h3>Campeonato de Fútbol Relámpago</h3>
+                                    <p>Torneo rápido papás vs. hijos en la cancha deportiva. ¡A demostrar quién manda!</p>
+                                    <span class="event-location">📍 Cancha Deportiva</span>
+                                </div>
+                            </div>
+                            <div class="event-card">
+                                <div class="event-time" style="background: linear-gradient(135deg,#1d3557,#457b9d);">01:00 PM</div>
+                                <div class="event-body">
+                                    <span class="event-icon">🍖</span>
+                                    <h3>Parrillada Comunitaria</h3>
+                                    <p>Gran almuerzo con parrillada, ensaladas, bebidas y música en vivo para toda la familia.</p>
+                                    <span class="event-location">📍 Área de BBQ</span>
+                                </div>
+                            </div>
+                            <div class="event-card">
+                                <div class="event-time" style="background: linear-gradient(135deg,#1d3557,#457b9d);">03:00 PM</div>
+                                <div class="event-body">
+                                    <span class="event-icon">🎯</span>
+                                    <h3>Juegos y Competencias Familiares</h3>
+                                    <p>Concursos de habilidad, trivia, palo ensebado y más diversión para toda la familia.</p>
+                                    <span class="event-location">📍 Plaza Central</span>
+                                </div>
+                            </div>
+                            <div class="event-card">
+                                <div class="event-time" style="background: linear-gradient(135deg,#1d3557,#457b9d);">04:00 PM</div>
+                                <div class="event-body">
+                                    <span class="event-icon">🎁</span>
+                                    <h3>Entrega de Obsequios</h3>
+                                    <p>Cada papá recibirá un regalo especial de la junta directiva en reconocimiento a su rol.</p>
+                                    <span class="event-location">📍 Plaza Central</span>
+                                </div>
+                            </div>
+                            <div class="event-card">
+                                <div class="event-time" style="background: linear-gradient(135deg,#1d3557,#457b9d);">05:00 PM</div>
+                                <div class="event-body">
+                                    <span class="event-icon">🎶</span>
+                                    <h3>Cierre con Música en Vivo</h3>
+                                    <p>Fin de fiesta con música, baile y el calor de la comunidad para cerrar una gran jornada.</p>
+                                    <span class="event-location">📍 Plaza Central</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TAB 3: INFORMACIÓN -->
+                    <div class="tab-content" id="padre-info" role="tabpanel">
+                        <div class="event-info-box" style="box-shadow:none;border-left:none;padding:0;">
+                            <h3 style="margin-bottom:20px;">📋 Información Importante</h3>
+                            <ul>
+                                <li><strong>Inscripciones:</strong> Hasta el 15 de junio con el Vocal 3</li>
+                                <li><strong>Participantes:</strong> Papás residentes de la urbanización</li>
+                                <li><strong>Costo:</strong> Gratis para residentes de la urbanización</li>
+                                <li><strong>Familia:</strong> El evento es abierto para toda la familia del residente</li>
+                                <li><strong>Aporte voluntario:</strong> Se aceptan donaciones para la parrillada</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contacto">
+        <div class="container footer-grid">
+            <div>
+                <h3>🏘️ Urb. Bonavila Etapa Fuego</h3>
+                <p>Una comunidad unida construyendo un mejor lugar para vivir.</p>
+            </div>
+            <div>
+                <h4>Contacto</h4>
+                <p>📧 michael7x@hotmail.com</p>
+                <p>📱 0982758166</p>
+                <p>📍 Etapa Fuego</p>
+            </div>
+            <div>
+                <h4>Horario de Atención</h4>
+                <p>Lunes a Viernes: 9:00 - 18:00</p>
+                <p>Sábados: 9:00 - 13:00</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Urb. Bonavila Etapa Fuego. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
