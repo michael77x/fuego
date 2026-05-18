@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="system/icono.ico">
+    <title>Emprendimientos - Urb. Bonavila Etapa Fuego</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .under-construction {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 60vh;
+            text-align: center;
+            padding: 60px 20px;
+        }
+        .under-construction .icon {
+            font-size: 80px;
+            margin-bottom: 24px;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.08); }
+        }
+        .under-construction h2 {
+            font-size: 2rem;
+            margin-bottom: 16px;
+            color: var(--primary, #e07b39);
+        }
+        .under-construction p {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 500px;
+            line-height: 1.7;
+        }
+        .under-construction .badge {
+            display: inline-block;
+            margin-top: 24px;
+            padding: 8px 22px;
+            background: var(--primary, #e07b39);
+            color: #fff;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+    <header class="page-header">
+        <nav id="site-navbar" class="navbar"></nav>
+        <script src="navbar.js"></script>
+        <div class="page-header-content">
+            <span class="page-breadcrumb"><a href="index.html">Inicio</a> / Emprendimientos</span>
+            <h1>Emprendimientos</h1>
+            <p>Negocios y servicios de nuestra comunidad</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <div class="under-construction">
+                    <div class="icon">🚧</div>
+                    <h2>Página en Construcción</h2>
+                    <p>
+                        Estamos trabajando para traerte el directorio de emprendimientos de nuestra urbanización.
+                        Pronto podrás encontrar aquí los negocios y servicios de tus vecinos.
+                    </p>
+                    <span class="badge">Próximamente</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="site-footer"></div>
+    <script src="footer.js"></script>
+</body>
+</html>

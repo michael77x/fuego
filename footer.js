@@ -5,7 +5,7 @@
     <footer id="contacto">
         <div class="container footer-grid">
             <div>
-                <h3>🏘️ Urb. Bonavila Etapa Fuego</h3>
+                <h3><img src="system/icono.png" alt="Logo" style="width:32px;height:32px;vertical-align:middle;margin-right:8px;border-radius:50%;"> Urb. Bonavila Etapa Fuego</h3>
                 <p>Una comunidad unida construyendo un mejor lugar para vivir.</p>
             </div>
             <div>
