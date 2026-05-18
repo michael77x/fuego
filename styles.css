@@ -842,6 +842,7 @@ footer p {
         white-space: nowrap;
         min-width: 100px;
     }
+    .participants-table td.text-center { text-align: left; }
     .table-search { width: 100%; }
     .table-toolbar { flex-direction: column; align-items: flex-start; }
     .ev-tabs .tab-content { padding: 20px; }
