@@ -10,21 +10,8 @@
 </head>
 <body>
     <header class="page-header">
-        <nav class="navbar">
-            <div class="logo">
-                <a href="index.html" style="text-decoration:none;color:inherit;display:flex;align-items:center;gap:10px;">
-                    <img src="system/icono.png" alt="Logo" class="logo-icon">
-                    <span class="logo-text">Urb. Bonavila Etapa Fuego</span>
-                </a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="directorio.html" class="active">Directorio</a></li>
-                <li><a href="eventos.html">Eventos</a></li>
-                <li><a href="index.html#contacto">Contacto</a></li>
-            </ul>
-            <button class="menu-toggle" aria-label="Menú">☰</button>
-        </nav>
+        <nav id="site-navbar" class="navbar"></nav>
+        <script src="navbar.js"></script>
         <div class="page-header-content">
             <span class="page-breadcrumb"><a href="index.html">Inicio</a> / Directorio</span>
             <h1>Junta Directiva</h1>
@@ -38,7 +25,7 @@
                 <div class="tabs">
                     <div class="tab-buttons" role="tablist">
                         <button class="tab-btn active" data-tab="presidente" role="tab">Presidente</button>
-                        <button class="tab-btn" data-tab="vicepresidente" role="tab">Vicepresidente</button>
+                        <button class="tab-btn" data-tab="vicepresidente" role="tab">Vicepresidenta</button>
                         <button class="tab-btn" data-tab="secretario" role="tab">Secretario</button>
                         <button class="tab-btn" data-tab="tesorero" role="tab">Tesorero</button>
                         <button class="tab-btn" data-tab="vocal1" role="tab">Vocal 1</button>
@@ -70,9 +57,11 @@
                     <!-- VICEPRESIDENTE -->
                     <div class="tab-content" id="vicepresidente" role="tabpanel">
                         <div class="profile-card">
-                            <div class="avatar">👩‍💼</div>
+                            <div class="avatar avatar--photo">
+                                <img src="directorio/vicepresidenta.jpeg" alt="Foto de Yahaira Astudillo Valarezo - Vicepresidenta">
+                            </div>
                             <div class="profile-info">
-                                <span class="role-badge">Vicepresidente</span>
+                                <span class="role-badge">Vicepresidenta</span>
                                 <h3>Yahaira Astudillo Valarezo</h3>
                                 <p class="description">Apoya y reemplaza al presidente en sus funciones cuando es necesario.</p>
                                 <ul class="responsibilities">
@@ -184,29 +173,9 @@
         </section>
     </main>
 
-    <footer id="contacto">
-        <div class="container footer-grid">
-            <div>
-                <h3>🏘️ Urb. Bonavila Etapa Fuego</h3>
-                <p>Una comunidad unida construyendo un mejor lugar para vivir.</p>
-            </div>
-            <div>
-                <h4>Contacto</h4>
-                <p>📧 michael7x@hotmail.com</p>
-                <p>📱 0982758166</p>
-                <p>📍 Etapa Fuego</p>
-            </div>
-            <div>
-                <h4>Horario de Atención</h4>
-                <p>Lunes a Viernes: 9:00 - 18:00</p>
-                <p>Sábados: 9:00 - 13:00</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Urb. Bonavila Etapa Fuego. Todos los derechos reservados.</p>
-        </div>
-    </footer>
+    <div id="site-footer"></div>
 
+    <script src="footer.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

@@ -10,21 +10,8 @@
 </head>
 <body>
     <header class="page-header page-header--events">
-        <nav class="navbar">
-            <div class="logo">
-                <a href="index.html" style="text-decoration:none;color:inherit;display:flex;align-items:center;gap:10px;">
-                    <img src="system/icono.png" alt="Logo" class="logo-icon">
-                    <span class="logo-text">Urb. Bonavila Etapa Fuego</span>
-                </a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="directorio.html">Directorio</a></li>
-                <li><a href="eventos.html" class="active">Eventos</a></li>
-                <li><a href="index.html#contacto">Contacto</a></li>
-            </ul>
-            <button class="menu-toggle" aria-label="Menú">☰</button>
-        </nav>
+        <nav id="site-navbar" class="navbar"></nav>
+        <script src="navbar.js"></script>
         <div class="page-header-content">
             <span class="page-breadcrumb"><a href="index.html">Inicio</a> / Eventos</span>
             <h1>Eventos Comunitarios</h1>
@@ -44,7 +31,7 @@
                 <div class="events-hub">
 
                     <!-- TARJETA: DÍA DEL NIÑO -->
-                    <a href="evento-dia-nino.html" class="event-hub-card">
+                    <a href="evento-dia-nino-2026.html" class="event-hub-card">
                         <div class="event-hub-banner event-hub-banner--nino">
                             <span class="event-hub-emoji">🎈</span>
                         </div>
@@ -54,11 +41,11 @@
                                 <span class="event-hub-status event-hub-status--upcoming">Próximo</span>
                             </div>
                             <h3>Día del Niño 2026</h3>
-                            <p>Una jornada llena de juegos, concursos, show de magia e inflables para los más pequeños de la comunidad.</p>
+                            <p>Una jornada llena de juegos y concursos para los más pequeños de la comunidad.</p>
                             <div class="event-hub-details">
                                 <span>📅 Sábado, 6 de Junio de 2026</span>
-                                <span>⏰ 15:30 — cierre del día</span>
-                                <span>📍 Plaza Central y áreas comunes</span>
+                                <span>⏰ 15:30 — 20:00</span>
+                                <span>📍 La Pérgola</span>
                             </div>
                             <div class="event-hub-footer">
                                 <span class="event-hub-cta">Ver detalles →</span>
@@ -67,7 +54,7 @@
                     </a>
 
                     <!-- TARJETA: DÍA DEL PADRE -->
-                    <a href="evento-dia-padre.html" class="event-hub-card">
+                    <a href="evento-dia-padre-2026.html" class="event-hub-card">
                         <div class="event-hub-banner event-hub-banner--padre">
                             <span class="event-hub-emoji">👨‍👦</span>
                         </div>
@@ -94,29 +81,9 @@
         </section>
     </main>
 
-    <footer id="contacto">
-        <div class="container footer-grid">
-            <div>
-                <h3>🏘️ Urb. Bonavila Etapa Fuego</h3>
-                <p>Una comunidad unida construyendo un mejor lugar para vivir.</p>
-            </div>
-            <div>
-                <h4>Contacto</h4>
-                <p>📧 michael7x@hotmail.com</p>
-                <p>📱 0982758166</p>
-                <p>📍 Etapa Fuego</p>
-            </div>
-            <div>
-                <h4>Horario de Atención</h4>
-                <p>Lunes a Viernes: 9:00 - 18:00</p>
-                <p>Sábados: 9:00 - 13:00</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Urb. Bonavila Etapa Fuego. Todos los derechos reservados.</p>
-        </div>
-    </footer>
+    <div id="site-footer"></div>
 
+    <script src="footer.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

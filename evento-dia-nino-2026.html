@@ -10,28 +10,15 @@
 </head>
 <body>
     <header class="page-header page-header--nino">
-        <nav class="navbar">
-            <div class="logo">
-                <a href="index.html" style="text-decoration:none;color:inherit;display:flex;align-items:center;gap:10px;">
-                    <img src="system/icono.png" alt="Logo" class="logo-icon">
-                    <span class="logo-text">Urb. Bonavila Etapa Fuego</span>
-                </a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="directorio.html">Directorio</a></li>
-                <li><a href="eventos.html" class="active">Eventos</a></li>
-                <li><a href="index.html#contacto">Contacto</a></li>
-            </ul>
-            <button class="menu-toggle" aria-label="Menú">☰</button>
-        </nav>
+        <nav id="site-navbar" class="navbar"></nav>
+        <script src="navbar.js"></script>
         <div class="page-header-content">
             <span class="page-breadcrumb">
                 <a href="index.html">Inicio</a> / <a href="eventos.html">Eventos</a> / Día del Niño 2026
             </span>
             <h1>🎈 Día del Niño 2026</h1>
             <p>Una jornada llena de diversión, alegría y sorpresas para los más pequeños de la comunidad</p>
-            <div class="event-date-badge">Sábado, 6 de Junio de 2026 — 15:30</div>
+            <div class="event-date-badge">Sábado, 6 de Junio de 2026 — 15:30 a 20:00</div>
         </div>
     </header>
 
@@ -59,6 +46,7 @@
                                         <th>Villa</th>
                                         <th>Familia</th>
                                         <th>Cuota</th>
+                                        <th>Recaudación</th>
                                         <th>N.º Niños</th>
                                         <th>Detalle</th>
                                     </tr>
@@ -69,6 +57,7 @@
                                         <td data-label="Villa">32</td>
                                         <td data-label="Familia">Rodríguez Sánchez</td>
                                         <td data-label="Cuota"><span class="badge badge--pending">Pendiente</span></td>
+                                        <td data-label="Recaudación" class="text-center">$10</td>
                                         <td data-label="N.º Niños" class="text-center">2</td>
                                         <td data-label="Detalle">
                                             <ul class="children-list">
@@ -93,7 +82,7 @@
                                     <span class="event-icon">🎊</span>
                                     <h3>Apertura y Bienvenida</h3>
                                     <p>Recepción de los niños con globos, música y un desayuno especial para iniciar el día.</p>
-                                    <span class="event-location">📍 Plaza Central</span>
+                                    <span class="event-location">📍 La Pérgola</span>
                                 </div>
                             </div>
                             <div class="event-card">
@@ -105,15 +94,7 @@
                                     <span class="event-location">📍 Salón Comunal</span>
                                 </div>
                             </div>
-                            <div class="event-card">
-                                <div class="event-time">11:30 AM</div>
-                                <div class="event-body">
-                                    <span class="event-icon">🤡</span>
-                                    <h3>Show de Payasos y Magia</h3>
-                                    <p>Espectáculo en vivo con payasos, magos y mucha diversión interactiva.</p>
-                                    <span class="event-location">📍 Plaza Central</span>
-                                </div>
-                            </div>
+
                             <div class="event-card">
                                 <div class="event-time">01:00 PM</div>
                                 <div class="event-body">
@@ -123,22 +104,14 @@
                                     <span class="event-location">📍 Área de BBQ</span>
                                 </div>
                             </div>
-                            <div class="event-card">
-                                <div class="event-time">02:30 PM</div>
-                                <div class="event-body">
-                                    <span class="event-icon">🏰</span>
-                                    <h3>Inflables y Juegos Acuáticos</h3>
-                                    <p>Castillos inflables, toboganes y zona acuática supervisada para refrescarse.</p>
-                                    <span class="event-location">📍 Cancha Deportiva</span>
-                                </div>
-                            </div>
+
                             <div class="event-card">
                                 <div class="event-time">04:00 PM</div>
                                 <div class="event-body">
                                     <span class="event-icon">🏆</span>
                                     <h3>Concursos y Competencias</h3>
                                     <p>Carreras de sacos, búsqueda del tesoro, rompe piñatas y muchos premios para los ganadores.</p>
-                                    <span class="event-location">📍 Plaza Central</span>
+                                    <span class="event-location">📍 La Pérgola</span>
                                 </div>
                             </div>
                             <div class="event-card">
@@ -147,7 +120,7 @@
                                     <span class="event-icon">🎁</span>
                                     <h3>Entrega de Regalos</h3>
                                     <p>Cada niño recibirá un obsequio especial cortesía de la junta directiva.</p>
-                                    <span class="event-location">📍 Plaza Central</span>
+                                    <span class="event-location">📍 La Pérgola</span>
                                 </div>
                             </div>
                             <div class="event-card">
@@ -180,29 +153,9 @@
         </section>
     </main>
 
-    <footer id="contacto">
-        <div class="container footer-grid">
-            <div>
-                <h3>🏘️ Urb. Bonavila Etapa Fuego</h3>
-                <p>Una comunidad unida construyendo un mejor lugar para vivir.</p>
-            </div>
-            <div>
-                <h4>Contacto</h4>
-                <p>📧 michael7x@hotmail.com</p>
-                <p>📱 0982758166</p>
-                <p>📍 Etapa Fuego</p>
-            </div>
-            <div>
-                <h4>Horario de Atención</h4>
-                <p>Lunes a Viernes: 9:00 - 18:00</p>
-                <p>Sábados: 9:00 - 13:00</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Urb. Bonavila Etapa Fuego. Todos los derechos reservados.</p>
-        </div>
-    </footer>
+    <div id="site-footer"></div>
 
+    <script src="footer.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
