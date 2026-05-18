@@ -818,6 +818,30 @@ footer p {
     text-align: right;
 }
 
+/* ===== SUMMARY TOTALES TAB ===== */
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 16px;
+    margin-top: 8px;
+}
+.summary-card {
+    background: #fff;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 28px 20px 24px;
+    text-align: center;
+    border-top: 4px solid var(--accent);
+}
+.summary-card--pending { border-top-color: #f77f00; }
+.summary-card--paid    { border-top-color: #2a9d8f; }
+.summary-card--kids    { border-top-color: var(--accent); }
+.summary-card--boy     { border-top-color: #457b9d; }
+.summary-card--girl    { border-top-color: var(--primary); }
+.summary-label { font-size: 0.82rem; color: #888; margin-bottom: 10px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.04em; }
+.summary-value { font-size: 2.4rem; font-weight: 700; color: var(--dark); line-height: 1; }
+.summary-sub   { font-size: 1.05rem; color: #666; margin-top: 8px; font-weight: 600; }
+
 /* Responsive table cards on mobile */
 @media (max-width: 640px) {
     .participants-table thead { display: none; }

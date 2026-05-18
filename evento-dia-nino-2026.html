@@ -30,6 +30,7 @@
                         <button class="tab-btn active" data-tab="nino-hogares" role="tab">🏠 Hogares Participantes</button>
                         <button class="tab-btn" data-tab="nino-programa" role="tab">📅 Actividades</button>
                         <button class="tab-btn" data-tab="nino-info" role="tab">📋 Información</button>
+                        <button class="tab-btn" data-tab="nino-totales" role="tab">📊 Totales</button>
                     </div>
 
                     <!-- TAB 1: HOGARES PARTICIPANTES -->
@@ -79,7 +80,7 @@
                                 </tbody>
                             </table>
                         </div>
-                        <p class="table-footer-note">Total de registros: <strong id="rowCount">1</strong> hogar(es) participante(s).</p>
+                        <p class="table-footer-note">Total de registros: <strong id="rowCount">0</strong> hogar(es) participante(s).</p>
                     </div>
 
                     <!-- TAB 2: PROGRAMA DEL DÍA -->
@@ -114,6 +115,35 @@
                                 <li><strong>Edades:</strong> Niños y niñas hasta 12 años</li>
                                 <li><strong>Acompañante:</strong> Cada niño debe asistir con un adulto responsable</li>
                             </ul>
+                        </div>
+                    </div>
+
+                    <!-- TAB 4: TOTALES -->
+                    <div class="tab-content" id="nino-totales" role="tabpanel">
+                        <h3 style="margin-bottom:20px;">📊 Resumen de Recaudación</h3>
+                        <div class="summary-grid">
+                            <div class="summary-card summary-card--pending">
+                                <p class="summary-label">Pendiente</p>
+                                <p class="summary-value" id="stat-pending-count">0</p>
+                                <p class="summary-sub" id="stat-pending-usd">$0</p>
+                            </div>
+                            <div class="summary-card summary-card--paid">
+                                <p class="summary-label">Pagado</p>
+                                <p class="summary-value" id="stat-paid-count">0</p>
+                                <p class="summary-sub" id="stat-paid-usd">$0</p>
+                            </div>
+                            <div class="summary-card summary-card--kids">
+                                <p class="summary-label">Total Niños</p>
+                                <p class="summary-value" id="stat-total-kids">0</p>
+                            </div>
+                            <div class="summary-card summary-card--boy">
+                                <p class="summary-label">Varones 👦</p>
+                                <p class="summary-value" id="stat-boys">0</p>
+                            </div>
+                            <div class="summary-card summary-card--girl">
+                                <p class="summary-label">Niñas 👧</p>
+                                <p class="summary-value" id="stat-girls">0</p>
+                            </div>
                         </div>
                     </div>
 

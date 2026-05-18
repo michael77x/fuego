@@ -13,8 +13,57 @@ function filterTable() {
     if (counter) counter.textContent = visible;
 }
 
+function initRowCount() {
+    const rows = document.querySelectorAll('#participantsTable tbody tr');
+    const counter = document.getElementById('rowCount');
+    if (counter && rows.length) counter.textContent = rows.length;
+}
+
+function computeTotals() {
+    const rows = document.querySelectorAll('#participantsTable tbody tr');
+    let pendingCount = 0, pendingUSD = 0;
+    let paidCount = 0, paidUSD = 0;
+    let totalKids = 0, boys = 0, girls = 0;
+
+    rows.forEach(row => {
+        const badge = row.querySelector('.badge');
+        const recCell = row.querySelector('td[data-label="Recaudación"]');
+        const kidsCell = row.querySelector('td[data-label="N.º Niños"]');
+        const childList = row.querySelector('.children-list');
+
+        const amount = recCell ? parseFloat(recCell.textContent.replace('$', '').trim()) || 0 : 0;
+        const kids = kidsCell ? parseInt(kidsCell.textContent.trim()) || 0 : 0;
+
+        if (badge && badge.classList.contains('badge--pending')) {
+            pendingCount++; pendingUSD += amount;
+        } else if (badge && badge.classList.contains('badge--paid')) {
+            paidCount++; paidUSD += amount;
+        }
+
+        totalKids += kids;
+
+        if (childList) {
+            childList.querySelectorAll('li').forEach(li => {
+                if (li.textContent.includes('👦')) boys++;
+                else if (li.textContent.includes('👧')) girls++;
+            });
+        }
+    });
+
+    const set = (id, val) => { const el = document.getElementById(id); if (el) el.textContent = val; };
+    set('stat-pending-count', pendingCount);
+    set('stat-pending-usd', '$' + pendingUSD.toFixed(2).replace(/\.00$/, ''));
+    set('stat-paid-count', paidCount);
+    set('stat-paid-usd', '$' + paidUSD.toFixed(2).replace(/\.00$/, ''));
+    set('stat-total-kids', totalKids);
+    set('stat-boys', boys);
+    set('stat-girls', girls);
+}
+
 // Tabs functionality
 document.addEventListener('DOMContentLoaded', () => {
+    initRowCount();
+    computeTotals();
     // Tabs functionality — scoped per .tabs container
     document.querySelectorAll('.tabs').forEach(tabContainer => {
         const buttons = tabContainer.querySelectorAll('.tab-btn');
