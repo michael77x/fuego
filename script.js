@@ -62,6 +62,7 @@ function computeTotals() {
 
 // Tabs functionality
 document.addEventListener('DOMContentLoaded', () => {
+    if (typeof renderParticipants === 'function') renderParticipants();
     initRowCount();
     computeTotals();
     // Tabs functionality — scoped per .tabs container
