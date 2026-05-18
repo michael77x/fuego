@@ -877,17 +877,21 @@ footer p {
 
     .section { padding: 60px 0; }
 
-    .tab-buttons { flex-direction: column; }
-
-    .tab-btn {
-        min-width: 100%;
-        border-bottom: 1px solid #e0e0e0;
-        border-left: 3px solid transparent;
+    .tab-buttons {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
     }
 
-    .tab-btn.active {
-        border-bottom-color: #e0e0e0;
-        border-left-color: var(--primary);
+    .tab-buttons::-webkit-scrollbar { display: none; }
+
+    .tab-btn {
+        flex: 0 0 auto;
+        min-width: unset;
+        padding: 14px 16px;
+        font-size: 0.85rem;
+        white-space: nowrap;
     }
 
     .tab-content { padding: 25px; }
