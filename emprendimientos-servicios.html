@@ -8,45 +8,202 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        .under-construction {
+        /* ---- Buscador ---- */
+        .ext-search-wrap {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 36px;
+        }
+        .ext-search {
+            width: 100%;
+            max-width: 520px;
+            padding: 12px 20px 12px 46px;
+            border: 2px solid #e0e0e0;
+            border-radius: 50px;
+            font-family: inherit;
+            font-size: 0.95rem;
+            outline: none;
+            transition: var(--transition);
+            background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%236c757d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'/%3E%3C/svg%3E") no-repeat 16px center;
+        }
+        .ext-search:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.12);
+        }
+
+        /* ---- Grid ---- */
+        .ext-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 28px;
+        }
+
+        /* ---- Tarjeta ---- */
+        .ext-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
             display: flex;
             flex-direction: column;
+            transition: var(--transition);
+        }
+        .ext-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-hover);
+        }
+        .ext-card__img {
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+            display: block;
+        }
+        .ext-card__img-placeholder {
+            width: 100%;
+            height: 190px;
+            display: flex;
             align-items: center;
             justify-content: center;
-            min-height: 60vh;
-            text-align: center;
-            padding: 60px 20px;
+            font-size: 4rem;
         }
-        .under-construction .icon {
-            font-size: 80px;
-            margin-bottom: 24px;
-            animation: pulse 2s infinite;
+        .ext-card__body {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
         }
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.08); }
+        .ext-card__name {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin: 0;
         }
-        .under-construction h2 {
-            font-size: 2rem;
-            margin-bottom: 16px;
-            color: var(--primary, #e07b39);
+        .ext-card__subtitle {
+            font-size: 0.9rem;
+            color: var(--gray);
+            margin: -4px 0 0;
         }
-        .under-construction p {
-            font-size: 1.1rem;
-            color: #666;
-            max-width: 500px;
-            line-height: 1.7;
+        .ext-card__tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
         }
-        .under-construction .badge {
-            display: inline-block;
-            margin-top: 24px;
-            padding: 8px 22px;
-            background: var(--primary, #e07b39);
+        .ext-tag {
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 50px;
+            background: var(--light);
+            color: var(--gray);
+        }
+        .ext-card__desc {
+            font-size: 0.88rem;
+            color: var(--gray);
+            line-height: 1.6;
+            margin: 0;
+        }
+        .ext-card__location {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.83rem;
+            color: var(--dark);
+            font-weight: 500;
+        }
+        .ext-card__footer {
+            padding: 0 20px 20px;
+        }
+        .btn-ws {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            padding: 11px 0;
+            background: #25d366;
             color: #fff;
             border-radius: 50px;
-            font-size: 0.9rem;
+            font-family: inherit;
+            font-size: 0.92rem;
             font-weight: 600;
-            letter-spacing: 1px;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        .btn-ws:hover {
+            background: #1ebe5d;
+            transform: translateY(-2px);
+        }
+
+        /* ---- Botón ver imagen ---- */
+        .btn-view-img {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 7px;
+            width: 100%;
+            padding: 9px 0;
+            background: transparent;
+            color: var(--dark);
+            border: 2px solid #e0e0e0;
+            border-radius: 50px;
+            font-family: inherit;
+            font-size: 0.88rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            margin-bottom: 10px;
+            text-decoration: none;
+        }
+        .btn-view-img:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        /* ---- Lightbox ---- */
+        .lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.88);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .lightbox.open { display: flex; }
+        .lightbox__img {
+            max-width: 100%;
+            max-height: 90vh;
+            border-radius: 10px;
+            box-shadow: 0 8px 40px rgba(0,0,0,0.6);
+            object-fit: contain;
+        }
+        .lightbox__close {
+            position: fixed;
+            top: 18px;
+            right: 22px;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 2.2rem;
+            cursor: pointer;
+            line-height: 1;
+            opacity: 0.85;
+        }
+        .lightbox__close:hover { opacity: 1; }
+
+        /* Sin resultados */
+        .ext-empty {
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--gray);
+            display: none;
+        }
+        .ext-empty.visible { display: block; }
+
+        @media (max-width: 600px) {
+            .ext-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -68,20 +225,106 @@
     <main>
         <section class="section">
             <div class="container">
-                <div class="under-construction">
-                    <div class="icon">🔧</div>
-                    <h2>Página en Construcción</h2>
-                    <p>
-                        Estamos preparando el directorio de servicios de nuestra urbanización.
-                        Pronto encontrarás aquí los servicios profesionales y técnicos que ofrecen tus vecinos.
-                    </p>
-                    <span class="badge">Próximamente</span>
+
+                <!-- Buscador -->
+                <div class="ext-search-wrap">
+                    <input
+                        type="search"
+                        id="extSearch"
+                        class="ext-search"
+                        placeholder="Buscar servicio o profesional..."
+                        autocomplete="off"
+                    >
                 </div>
+
+                <!-- Grid -->
+                <div class="ext-grid" id="extGrid">
+
+                    <!-- ====== MICHAEL RODRÍGUEZ ====== -->
+                    <div class="ext-card" data-name="michael rodríguez programador sistemas desarrollo web software aplicaciones tecnología">
+                        <img src="emprendimientos/mz-6924-villa-32.png" alt="Michael Rodríguez - Programador de Sistemas" class="ext-card__img">
+                        <div class="ext-card__body">
+                            <h3 class="ext-card__name">Michael Rodríguez</h3>
+                            <p class="ext-card__subtitle">Programador de Sistemas</p>
+                            <div class="ext-card__tags">
+                                <span class="ext-tag">Desarrollo Web</span>
+                                <span class="ext-tag">Software</span>
+                                <span class="ext-tag">Sistemas</span>
+                            </div>
+                            <p class="ext-card__desc">
+                                Servicio profesional de programación y desarrollo de sistemas.
+                                Soluciones tecnológicas a medida para tu negocio o proyecto.
+                            </p>
+                            <div class="ext-card__location">
+                                📍 Mz. 6924 Villa 32
+                            </div>
+                        </div>
+                        <div class="ext-card__footer">
+                            <button class="btn-view-img" onclick="openLightbox('emprendimientos/mz-6924-villa-32.png', 'Michael Rodríguez')">
+                                🖼️ Ver publicidad
+                            </button>
+                            <a href="https://wa.me/593982758166" target="_blank" rel="noopener noreferrer" class="btn-ws">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                                </svg>
+                                Escribir por WhatsApp
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Sin resultados -->
+                <div class="ext-empty" id="extEmpty">
+                    <p style="font-size:2rem;margin-bottom:12px">🔍</p>
+                    <p>No se encontraron servicios con ese nombre.</p>
+                </div>
+
             </div>
         </section>
     </main>
 
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+        <button class="lightbox__close" onclick="closeLightboxAll()" aria-label="Cerrar">&times;</button>
+        <img class="lightbox__img" id="lightboxImg" src="" alt="">
+    </div>
+
     <div id="site-footer"></div>
     <script src="footer.js"></script>
+    <script>
+        function openLightbox(src, alt) {
+            document.getElementById('lightboxImg').src = src;
+            document.getElementById('lightboxImg').alt = alt;
+            document.getElementById('lightbox').classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeLightboxAll() {
+            document.getElementById('lightbox').classList.remove('open');
+            document.body.style.overflow = '';
+        }
+        function closeLightbox(e) {
+            if (e.target === document.getElementById('lightbox')) closeLightboxAll();
+        }
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeLightboxAll();
+        });
+
+        const search = document.getElementById('extSearch');
+        const cards  = document.querySelectorAll('.ext-card');
+        const empty  = document.getElementById('extEmpty');
+
+        search.addEventListener('input', function () {
+            const q = this.value.trim().toLowerCase();
+            let visible = 0;
+            cards.forEach(function (card) {
+                const text = card.getAttribute('data-name') + ' ' + card.innerText;
+                const match = text.toLowerCase().includes(q);
+                card.style.display = match ? '' : 'none';
+                if (match) visible++;
+            });
+            empty.classList.toggle('visible', visible === 0);
+        });
+    </script>
 </body>
 </html>
