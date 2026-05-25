@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="system/icono.ico">
+    <title>Mapa - Urb. Bonavila Etapa Fuego</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .map-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .map-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+        .map-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .map-card__img-wrap {
+            position: relative;
+            cursor: pointer;
+            overflow: hidden;
+        }
+        .map-card__img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+        .map-card__img-wrap:hover .map-card__img {
+            transform: scale(1.04);
+        }
+        .map-card__zoom-hint {
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s;
+        }
+        .map-card__img-wrap:hover .map-card__zoom-hint {
+            background: rgba(0,0,0,0.28);
+        }
+        .map-card__zoom-hint span {
+            background: rgba(255,255,255,0.92);
+            border-radius: 50px;
+            padding: 8px 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--dark);
+            opacity: 0;
+            transform: translateY(6px);
+            transition: opacity 0.3s, transform 0.3s;
+        }
+        .map-card__img-wrap:hover .map-card__zoom-hint span {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .map-card__body {
+            padding: 20px 22px 22px;
+        }
+        .map-card__title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin: 0 0 6px;
+        }
+        .map-card__desc {
+            font-size: 0.88rem;
+            color: var(--gray);
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* ---- Lightbox ---- */
+        .lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.92);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .lightbox.open { display: flex; }
+        .lightbox__img {
+            max-width: 100%;
+            max-height: 92vh;
+            border-radius: 10px;
+            box-shadow: 0 8px 40px rgba(0,0,0,0.6);
+            object-fit: contain;
+        }
+        .lightbox__close {
+            position: fixed;
+            top: 16px;
+            right: 20px;
+            background: rgba(255,255,255,0.15);
+            border: none;
+            color: #fff;
+            font-size: 1.8rem;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s;
+        }
+        .lightbox__close:hover { background: rgba(255,255,255,0.3); }
+        .lightbox__caption {
+            position: fixed;
+            bottom: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0,0,0,0.6);
+            color: #fff;
+            padding: 8px 22px;
+            border-radius: 50px;
+            font-size: 0.88rem;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        @media (max-width: 600px) {
+            .map-grid { grid-template-columns: 1fr; }
+            .map-card__img { height: 220px; }
+        }
+    </style>
+</head>
+<body>
+    <header class="page-header">
+        <nav id="site-navbar" class="navbar"></nav>
+        <script src="navbar.js"></script>
+        <div class="page-header-content">
+            <span class="page-breadcrumb"><a href="index.html">Inicio</a> / Mapa</span>
+            <h1>Mapa de la Urbanización</h1>
+            <p>Planos y distribución de Urb. Bonavila</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <div class="map-grid">
+
+                    <!-- Etapa Fuego -->
+                    <div class="map-card">
+                        <div class="map-card__img-wrap" onclick="openLightbox('mapa/etapa-fuego.png', 'Etapa 3 – Fuego')">
+                            <img src="mapa/etapa-fuego.png" alt="Mapa Etapa 3 Fuego" class="map-card__img">
+                            <div class="map-card__zoom-hint"><span>🔍 Ver en detalle</span></div>
+                        </div>
+                        <div class="map-card__body">
+                            <h3 class="map-card__title">Etapa 3 — Fuego</h3>
+                            <p class="map-card__desc">
+                                Distribución detallada de manzanas y villas de nuestra etapa.
+                                Incluye áreas verdes y planta de tratamiento.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- General Bonavila -->
+                    <div class="map-card">
+                        <div class="map-card__img-wrap" onclick="openLightbox('mapa/otras-etapas.png', 'Urb. Bonavila – Vista General')">
+                            <img src="mapa/otras-etapas.png" alt="Mapa general Urb. Bonavila" class="map-card__img">
+                            <div class="map-card__zoom-hint"><span>🔍 Ver en detalle</span></div>
+                        </div>
+                        <div class="map-card__body">
+                            <h3 class="map-card__title">Urb. Bonavila — Vista General</h3>
+                            <p class="map-card__desc">
+                                Mapa de las etapas: Aire, Tierra, Agua y Armonía,
+                                junto al Club Social.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+        <button class="lightbox__close" onclick="closeLightboxAll()" aria-label="Cerrar">&times;</button>
+        <img class="lightbox__img" id="lightboxImg" src="" alt="">
+        <div class="lightbox__caption" id="lightboxCaption"></div>
+    </div>
+
+    <div id="site-footer"></div>
+    <script src="footer.js"></script>
+    <script>
+        function openLightbox(src, caption) {
+            document.getElementById('lightboxImg').src = src;
+            document.getElementById('lightboxImg').alt = caption;
+            document.getElementById('lightboxCaption').textContent = caption;
+            document.getElementById('lightbox').classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeLightboxAll() {
+            document.getElementById('lightbox').classList.remove('open');
+            document.body.style.overflow = '';
+        }
+        function closeLightbox(e) {
+            if (e.target === document.getElementById('lightbox')) closeLightboxAll();
+        }
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeLightboxAll();
+        });
+    </script>
+</body>
+</html>

@@ -14,6 +14,7 @@
             <li><a href="directorio.html" data-page="directorio">Directorio</a></li>
             <li><a href="eventos.html" data-page="eventos">Eventos</a></li>
             <li><a href="emprendimientos.html" data-page="emprendimientos">Emprendimientos</a></li>
+            <li><a href="mapa.html" data-page="mapa">Mapa</a></li>
             <li><a href="index.html#contacto">Contacto</a></li>
         </ul>
         <button class="menu-toggle" aria-label="Menú">☰</button>
@@ -26,7 +27,8 @@
         'index.html': 'index',
         'directorio.html': 'directorio',
         'eventos.html': 'eventos',
-        'emprendimientos.html': 'emprendimientos'
+        'emprendimientos.html': 'emprendimientos',
+        'mapa.html': 'mapa'
     };
 
     var activePage = pageMap[filename];
