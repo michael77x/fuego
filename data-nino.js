@@ -11,6 +11,13 @@ const participantesNino = [
         mz: "6926", villa: "16", familia: "Larco Guerrero",
         cuota: "pendiente", recaudacion: 5,
         ninos: [], detalle: "Aporte voluntario"
+    },
+    {
+        mz: "6919", villa: "11", familia: "Astudillo Astudillo",
+        cuota: "pendiente", recaudacion: 5,
+        ninos: [
+            { nombre: "Ámbar Astudillo", edad: 12, genero: "f" }
+        ]
     }
 ];
 
