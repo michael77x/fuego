@@ -740,6 +740,24 @@ footer p {
     box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.1);
 }
 
+.btn--export {
+    padding: 9px 18px;
+    background: #217346;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+    white-space: nowrap;
+}
+.btn--export:hover {
+    background: #185c38;
+    box-shadow: 0 4px 12px rgba(33,115,70,0.25);
+}
+
 .table-wrapper {
     overflow-x: auto;
     border-radius: var(--radius);

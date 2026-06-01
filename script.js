@@ -13,6 +13,32 @@ function filterTable() {
     if (counter) counter.textContent = visible;
 }
 
+function exportToXlsx() {
+    if (typeof XLSX === 'undefined' || typeof participantesNino === 'undefined') return;
+
+    const rows = participantesNino.map(p => {
+        const ninos = p.ninos.map(n => `${n.nombre} (${n.edad === 0 ? '< 1 año' : n.edad + (n.edad === 1 ? ' año' : ' años')}, ${n.genero === 'm' ? 'niño' : 'niña'})`).join(' | ');
+        return {
+            'Mz.': p.mz,
+            'Villa': p.villa,
+            'Familia': p.familia,
+            'Cuota': p.cuota === 'pagado' ? 'Pagado' : 'Pendiente',
+            'Recaudación ($)': p.recaudacion,
+            'N.º Niños': p.ninos.length,
+            'Detalle / Niños': p.ninos.length > 0 ? ninos : (p.detalle || '')
+        };
+    });
+
+    const ws = XLSX.utils.json_to_sheet(rows);
+    ws['!cols'] = [
+        { wch: 8 }, { wch: 8 }, { wch: 26 }, { wch: 12 },
+        { wch: 16 }, { wch: 10 }, { wch: 60 }
+    ];
+    const wb = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, 'Participantes');
+    XLSX.writeFile(wb, 'Dia_Nino_2026_Participantes.xlsx');
+}
+
 function initRowCount() {
     const rows = document.querySelectorAll('#participantsTable tbody tr');
     const counter = document.getElementById('rowCount');
