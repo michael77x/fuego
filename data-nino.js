@@ -113,7 +113,7 @@ const participantesNino = [
         mz: "6925", villa: "3", familia: "Peralta Loor",
         cuota: "pendiente", recaudacion: 5,
         ninos: [
-            { nombre: "Emma Valentina Peralta Loor", edad: 0, genero: "f" }
+            { nombre: "Emma Valentina Peralta Loor", edad: 5, genero: "f" }
         ]
     },
     {
