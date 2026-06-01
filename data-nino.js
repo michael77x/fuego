@@ -147,7 +147,7 @@ const participantesNino = [
     },
     {
         mz: "6925", villa: "16", familia: "Veloz Santillán",
-        cuota: "pendiente", recaudacion: 15,
+        cuota: "pagado", recaudacion: 15,
         ninos: [
             { nombre: "Angelina Veloz", edad: 5, genero: "f" },
             { nombre: "Vivian Veloz", edad: 7, genero: "f" },
