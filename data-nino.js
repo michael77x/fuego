@@ -15,7 +15,7 @@ const participantesNino = [
         mz: "6919", villa: "10", familia: "Paredes Espinoza",
         cuota: "pendiente", recaudacion: 5,
         ninos: [
-            { nombre: "José Andrés Paredes Espinoza", edad: 0, genero: "m" }
+            { nombre: "José Andrés Paredes Espinoza", edad: 4, genero: "m" }
         ]
     },
     {
@@ -53,7 +53,7 @@ const participantesNino = [
         mz: "6920", villa: "6", familia: "Soriano Garcia Johanna",
         cuota: "pagado", recaudacion: 5,
         ninos: [
-            { nombre: "Julio Eduardo Soriano Crespo", edad: 0, genero: "m" }
+            { nombre: "Julio Eduardo Soriano Crespo", edad: 7, genero: "m" }
         ]
     },
     {
@@ -151,7 +151,7 @@ const participantesNino = [
         ninos: [
             { nombre: "Angelina Veloz", edad: 5, genero: "f" },
             { nombre: "Vivian Veloz", edad: 7, genero: "f" },
-            { nombre: "Thiago Veloz", edad: 0, genero: "m" }
+            { nombre: "Thiago Veloz", edad: 10, genero: "m" }
         ]
     },
     /* ── Mz. 6926 ────────────────────────────────────────────── */
