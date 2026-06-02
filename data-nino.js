@@ -85,6 +85,15 @@ const participantesNino = [
             { nombre: "Sin identificar", edad: 0, genero: "m" }
         ]
     },
+    /* ── Mz. 6923 ────────────────────────────────────────────── */
+    {
+        mz: "6923", villa: "1", familia: "Esmeraldas Ponce",
+        cuota: "pagado", recaudacion: 10,
+        ninos: [
+            { nombre: "Gael Esmeraldas", edad: 0, genero: "m" },
+            { nombre: "Ian Ponce", edad: 0, genero: "m" }
+        ]
+    },
     /* ── Mz. 6924 ────────────────────────────────────────────── */
     {
         mz: "6924", villa: "1", familia: "Cuero Zambrano",
