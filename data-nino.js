@@ -27,7 +27,7 @@ const participantesNino = [
     },
     {
         mz: "6919", villa: "12", familia: "Galarza Freire",
-        cuota: "pendiente", recaudacion: 5,
+        cuota: "pagado", recaudacion: 5,
         ninos: [
             { nombre: "Santiago Galarza Freire", edad: 13, genero: "m" }
         ]
@@ -87,8 +87,22 @@ const participantesNino = [
     },
     /* ── Mz. 6924 ────────────────────────────────────────────── */
     {
-        mz: "6924", villa: "7", familia: "Calderón Heredero",
+        mz: "6924", villa: "1", familia: "Cuero Zambrano",
         cuota: "pendiente", recaudacion: 5,
+        ninos: [
+            { nombre: "Amaya Cuero", edad: 7, genero: "f" }
+        ]
+    },
+    {
+        mz: "6924", villa: "2", familia: "Soriano Tapia",
+        cuota: "pendiente", recaudacion: 5,
+        ninos: [
+            { nombre: "David Alcides Soriano García", edad: 1, genero: "m" }
+        ]
+    },
+    {
+        mz: "6924", villa: "7", familia: "Calderón Heredero",
+        cuota: "pagado", recaudacion: 5,
         ninos: [
             { nombre: "Eithan Calderón", edad: 0, genero: "m" }
         ], detalle: "9 meses de edad"
@@ -111,7 +125,7 @@ const participantesNino = [
     /* ── Mz. 6925 ────────────────────────────────────────────── */
     {
         mz: "6925", villa: "3", familia: "Peralta Loor",
-        cuota: "pendiente", recaudacion: 5,
+        cuota: "pagado", recaudacion: 5,
         ninos: [
             { nombre: "Emma Valentina Peralta Loor", edad: 5, genero: "f" }
         ]
@@ -126,7 +140,7 @@ const participantesNino = [
     },
     {
         mz: "6925", villa: "8", familia: "Mosquera Velázquez",
-        cuota: "pendiente", recaudacion: 5,
+        cuota: "pagado", recaudacion: 5,
         ninos: [
             { nombre: "Sasha Mosquera", edad: 10, genero: "f" }
         ]
