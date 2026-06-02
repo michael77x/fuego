@@ -88,7 +88,7 @@ const participantesNino = [
     /* ── Mz. 6924 ────────────────────────────────────────────── */
     {
         mz: "6924", villa: "1", familia: "Cuero Zambrano",
-        cuota: "pendiente", recaudacion: 5,
+        cuota: "pagado", recaudacion: 5,
         ninos: [
             { nombre: "Amaya Cuero", edad: 7, genero: "f" }
         ]
