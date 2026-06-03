@@ -10,6 +10,11 @@ const participantesNino = [
         cuota: "pagado", recaudacion: 5,
         ninos: [], detalle: "Aporte voluntario"
     },
+    {
+        mz: "—", villa: "—", familia: "Jorge Sanchez",
+        cuota: "pagado", recaudacion: 5,
+        ninos: [], detalle: "Aporte voluntario"
+    },
     /* ── Mz. 6919 ────────────────────────────────────────────── */
     {
         mz: "6919", villa: "7", familia: "Parrales Pincay",
