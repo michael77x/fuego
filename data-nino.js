@@ -12,6 +12,13 @@ const participantesNino = [
     },
     /* ── Mz. 6919 ────────────────────────────────────────────── */
     {
+        mz: "6919", villa: "7", familia: "Parrales Pincay",
+        cuota: "pagado", recaudacion: 5,
+        ninos: [
+            { nombre: "Ethan Parrales", edad: 6, genero: "m" }
+        ]
+    },
+    {
         mz: "6919", villa: "10", familia: "Paredes Espinoza",
         cuota: "pendiente", recaudacion: 5,
         ninos: [
@@ -20,7 +27,7 @@ const participantesNino = [
     },
     {
         mz: "6919", villa: "11", familia: "Astudillo Astudillo",
-        cuota: "pendiente", recaudacion: 5,
+        cuota: "pagado", recaudacion: 5,
         ninos: [
             { nombre: "Ámbar Astudillo", edad: 12, genero: "f" }
         ]
@@ -43,10 +50,14 @@ const participantesNino = [
     /* ── Mz. 6920 ────────────────────────────────────────────── */
     {
         mz: "6920", villa: "5", familia: "Chalen Marquez",
-        cuota: "pagado", recaudacion: 20,
+        cuota: "pagado", recaudacion: 30,
         ninos: [
-            { nombre: "Sin identificar", edad: 0, genero: "m" },
-            { nombre: "Sin identificar", edad: 0, genero: "m" }
+            { nombre: "Ithan Ruiz Chalen", edad: 0, genero: "m" },
+            { nombre: "Charlotte Ruiz Chalen", edad: 0, genero: "f" },
+            { nombre: "Iveth Ruiz Chalen", edad: 0, genero: "f" },
+            { nombre: "Belen Tutiven Chalen", edad: 0, genero: "f" },
+            { nombre: "Einar del Barco Delgado", edad: 0, genero: "m" },
+            { nombre: "Ariel Toapanta Chalen", edad: 0, genero: "m" }
         ]
     },
     {
@@ -76,6 +87,18 @@ const participantesNino = [
         cuota: "pagado", recaudacion: 5,
         ninos: [], detalle: "Aporte voluntario"
     },
+    {
+        mz: "6921", villa: "5", familia: "Guardería Arcoiris de Sueños",
+        cuota: "pagado", recaudacion: 5,
+        ninos: [], detalle: "Aporte voluntario"
+    },
+    {
+        mz: "6921", villa: "10", familia: "Garzón Erazo",
+        cuota: "pendiente", recaudacion: 5,
+        ninos: [
+            { nombre: "Alice Garzón", edad: 6, genero: "f" }
+        ]
+    },
     /* ── Mz. 6922 ────────────────────────────────────────────── */
     {
         mz: "6922", villa: "2", familia: "Sin identificar",
@@ -104,7 +127,7 @@ const participantesNino = [
     },
     {
         mz: "6924", villa: "2", familia: "Soriano Tapia",
-        cuota: "pendiente", recaudacion: 5,
+        cuota: "pagado", recaudacion: 5,
         ninos: [
             { nombre: "David Alcides Soriano García", edad: 1, genero: "m" }
         ]
@@ -209,6 +232,13 @@ const participantesNino = [
         mz: "6926", villa: "16", familia: "Larco Guerrero",
         cuota: "pagado", recaudacion: 5,
         ninos: [], detalle: "Aporte voluntario"
+    },
+    {
+        mz: "6926", villa: "22", familia: "Garcia Vasquez Lissette",
+        cuota: "pagado", recaudacion: 5,
+        ninos: [
+            { nombre: "Pesantes Garcia Niall Donatto", edad: 7, genero: "m" }
+        ]
     }
 ];
 
