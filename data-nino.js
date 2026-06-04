@@ -216,6 +216,14 @@ const participantesNino = [
         ]
     },
     {
+        mz: "6926", villa: "10", familia: "Saldaña Sotomayor; Lopez García",
+        cuota: "pendiente", recaudacion: 10,
+        ninos: [
+            { nombre: "Mark Saldaña", edad: 3, genero: "m" },
+            { nombre: "Elyan López", edad: 0, genero: "m" }
+        ], detalle: "Elyan: 4 meses de edad"
+    },
+    {
         mz: "6926", villa: "13", familia: "Morales Santiana",
         cuota: "pagado", recaudacion: 20,
         ninos: [
@@ -227,7 +235,7 @@ const participantesNino = [
     },
     {
         mz: "6926", villa: "14", familia: "Veloz Ayauca",
-        cuota: "pendiente", recaudacion: 10,
+        cuota: "pagado", recaudacion: 10,
         ninos: [
             { nombre: "Paulette Aitana Veloz Ayauca", edad: 3, genero: "f" },
             { nombre: "Matías Elian Veloz Ayauca", edad: 0, genero: "m" }
