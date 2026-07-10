@@ -13,6 +13,7 @@
             <li><a href="index.html" data-page="index">Inicio</a></li>
             <li><a href="directorio.html" data-page="directorio">Directorio</a></li>
             <li><a href="eventos.html" data-page="eventos">Eventos</a></li>
+            <li><a href="reuniones.html" data-page="reuniones">Reuniones</a></li>
             <li><a href="emprendimientos.html" data-page="emprendimientos">Emprendimientos</a></li>
             <li><a href="mapa.html" data-page="mapa">Mapa</a></li>
             <li><a href="index.html#contacto">Contacto</a></li>
@@ -27,6 +28,7 @@
         'index.html': 'index',
         'directorio.html': 'directorio',
         'eventos.html': 'eventos',
+        'reuniones.html': 'reuniones',
         'emprendimientos.html': 'emprendimientos',
         'mapa.html': 'mapa'
     };
@@ -36,6 +38,11 @@
     // Las páginas de eventos individuales resaltan "Eventos"
     if (!activePage && filename.startsWith('evento-')) {
         activePage = 'eventos';
+    }
+
+    // Las páginas de detalle de reuniones resaltan "Reuniones"
+    if (!activePage && filename.startsWith('reunion-')) {
+        activePage = 'reuniones';
     }
 
     if (activePage) {

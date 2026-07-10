@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="system/icono.ico">
+    <title>Reuniones - Urb. Bonavila Etapa Fuego</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .records-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+        }
+
+        .record-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 24px;
+            border-top: 4px solid var(--primary);
+            transition: var(--transition);
+        }
+
+        .record-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .record-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        .record-chip {
+            font-size: 0.78rem;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: var(--light);
+            color: var(--dark);
+        }
+
+        .record-title {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            color: var(--dark);
+        }
+
+        .record-desc {
+            color: var(--gray);
+            font-size: 0.93rem;
+            margin-bottom: 16px;
+        }
+
+        .record-actions {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 480px) {
+            .record-card { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <header class="page-header">
+        <nav id="site-navbar" class="navbar"></nav>
+        <script src="navbar.js"></script>
+        <div class="page-header-content">
+            <span class="page-breadcrumb"><a href="index.html">Inicio</a> / Reuniones</span>
+            <h1>Reuniones y Propuestas</h1>
+            <p>Consulta actas comunitarias, propuestas discutidas y acuerdos de seguimiento.</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <div class="section-header" style="margin-bottom:28px;">
+                    <h2>Actas Publicadas</h2>
+                    <p>Este espacio irá creciendo con cada nueva reunión comunitaria.</p>
+                </div>
+
+                <div class="records-grid">
+                    <article class="record-card">
+                        <div class="record-meta">
+                            <span class="record-chip">05/07/2026</span>
+                            <span class="record-chip">16:00</span>
+                            <span class="record-chip">Comunitaria</span>
+                        </div>
+                        <h3 class="record-title">Reunión Comunitaria - 05 de julio de 2026</h3>
+                        <p class="record-desc">Resumen publico de la reunion con temas tratados, acuerdos y acciones de seguimiento.</p>
+                        <div class="record-actions">
+                            <a class="btn-primary" href="reuniones/reunion-2026-07-05.html" style="padding:10px 18px;">Ver detalle</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="site-footer"></div>
+
+    <script src="footer.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
